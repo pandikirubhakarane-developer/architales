@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import founderImage from "@/assets/founder.jpg";
+import founderImage from "@/assets/founder.jpeg";
 import heroImage from "@/assets/hero-architecture.jpg";
 
 const values = [
@@ -45,7 +45,9 @@ const About = () => {
         </div>
         <div className="relative z-10 container-wide text-center text-primary-foreground">
           <ScrollReveal>
-            <p className="text-caption text-primary-foreground/70 mb-4">About Us</p>
+            <p className="text-caption text-primary-foreground/70 mb-4">
+              About Us
+            </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <h1 className="heading-display">
@@ -60,9 +62,11 @@ const About = () => {
         <div className="container-narrow">
           <ScrollReveal>
             <p className="text-2xl md:text-3xl lg:text-4xl font-display leading-relaxed text-center">
-              Architales Design Studio is where <span className="italic">vision meets precision</span>. 
-              We believe architecture is more than building—it's about creating experiences, 
-              shaping how people live, work, and feel in their spaces.
+              Architales Design Studio is where{" "}
+              <span className="italic">vision meets precision</span>. We believe
+              architecture is more than building—it's about creating
+              experiences, shaping how people live, work, and feel in their
+              spaces.
             </p>
           </ScrollReveal>
         </div>
@@ -84,32 +88,27 @@ const About = () => {
 
             <div>
               <ScrollReveal>
-                <p className="text-caption mb-4">Founder & Principal Architect</p>
+                <p className="text-caption mb-4">ABOUT ARCHITALES</p>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h2 className="heading-section mb-6">Ar. DeviShree J R</h2>
+                <h2 className="heading-section mb-6">
+                  Crafting Spaces with Purpose & Precision
+                </h2>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
                 <p className="text-body mb-6">
-                  With a deep passion for creating spaces that resonate with their inhabitants, 
-                  Ar. DeviShree J R founded Architales with a clear vision: to bring together 
-                  the art of architecture, the warmth of thoughtful interiors, and the precision 
-                  of expert construction.
+                  Founded by Ar. DeviShree J R, Architales Design Studio brings
+                  together architectural expertise, interior sensibility, and
+                  construction excellence to create spaces that transcend
+                  trends.
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.3}>
                 <p className="text-body mb-6">
-                  Her approach combines classical design principles with contemporary sensibilities, 
-                  ensuring each project stands the test of time while meeting the unique needs 
-                  of modern living. Every design begins with deep listening—understanding not 
-                  just what clients want, but how they want to feel in their spaces.
-                </p>
-              </ScrollReveal>
-              <ScrollReveal delay={0.4}>
-                <p className="text-body">
-                  Under her leadership, Architales has grown into a trusted name for discerning 
-                  clients who seek architecture that combines beauty, functionality, and 
-                  uncompromising quality.
+                  Every project begins with listening-understanding your vision,
+                  your lifestyle, and youraspirations. From concept to
+                  completion, we ensure every detail reflects thoughtful design
+                  and uncompromising quality.
                 </p>
               </ScrollReveal>
             </div>
@@ -126,7 +125,8 @@ const About = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <h2 className="heading-section">
-                Values That <span className="font-display italic">Guide</span> Us
+                Values That <span className="font-display italic">Guide</span>{" "}
+                Us
               </h2>
             </ScrollReveal>
           </div>
@@ -135,7 +135,9 @@ const About = () => {
             {values.map((value, index) => (
               <ScrollReveal key={value.number} delay={index * 0.1}>
                 <div className="p-8 lg:p-10 border border-border">
-                  <span className="text-caption text-muted-foreground">{value.number}</span>
+                  <span className="text-caption text-muted-foreground">
+                    {value.number}
+                  </span>
                   <h3 className="heading-card mt-4 mb-4">{value.title}</h3>
                   <p className="text-body">{value.description}</p>
                 </div>
@@ -150,8 +152,8 @@ const About = () => {
         <div className="container-wide">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "50+", label: "Projects Completed" },
-              { number: "8+", label: "Years Experience" },
+              { number: "20+", label: "Projects Completed" },
+              { number: "4 +", label: "Years Experience" },
               { number: "100%", label: "Client Satisfaction" },
               { number: "3", label: "Core Services" },
             ].map((stat, index) => (
@@ -160,7 +162,9 @@ const About = () => {
                   <p className="font-display text-4xl md:text-5xl lg:text-6xl font-medium mb-2">
                     {stat.number}
                   </p>
-                  <p className="text-caption text-primary-foreground/70">{stat.label}</p>
+                  <p className="text-caption text-primary-foreground/70">
+                    {stat.label}
+                  </p>
                 </div>
               </ScrollReveal>
             ))}

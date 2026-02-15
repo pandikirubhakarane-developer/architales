@@ -6,9 +6,21 @@ import Layout from "@/components/layout/Layout";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const contactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
-  email: z.string().trim().email("Please enter a valid email address").max(255, "Email must be less than 255 characters"),
-  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters"),
+  name: z
+    .string()
+    .trim()
+    .min(1, "Name is required")
+    .max(100, "Name must be less than 100 characters"),
+  email: z
+    .string()
+    .trim()
+    .email("Please enter a valid email address")
+    .max(255, "Email must be less than 255 characters"),
+  message: z
+    .string()
+    .trim()
+    .min(1, "Message is required")
+    .max(1000, "Message must be less than 1000 characters"),
 });
 
 const Contact = () => {
@@ -21,7 +33,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -33,10 +45,10 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate form data
     const result = contactSchema.safeParse(formData);
-    
+
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
       result.error.errors.forEach((err) => {
@@ -49,10 +61,10 @@ const Contact = () => {
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    
+
     toast.success("Message sent successfully! We'll get back to you soon.");
     setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
@@ -64,17 +76,20 @@ const Contact = () => {
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-primary text-primary-foreground">
         <div className="container-wide">
           <ScrollReveal>
-            <p className="text-caption text-primary-foreground/70 mb-4">Contact Us</p>
+            <p className="text-caption text-primary-foreground/70 mb-4">
+              Contact Us
+            </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <h1 className="heading-display max-w-4xl">
-              Let's Create <span className="font-display italic">Meaningful</span> Spaces Together
+              Let’s Design Your Story Together
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="text-xl text-primary-foreground/70 max-w-2xl mt-6">
-              Have a project in mind? We'd love to hear about it. 
-              Reach out and let's start a conversation about bringing your vision to life.
+              Every space has a story, and we’d love to help tell yours. Share
+              your ideas, dreams, or questions with us—let’s collaborate to
+              create a space that truly feels like you.
             </p>
           </ScrollReveal>
         </div>
@@ -105,7 +120,9 @@ const Contact = () => {
                       placeholder="Enter your name"
                     />
                     {errors.name && (
-                      <p className="text-destructive text-sm mt-2">{errors.name}</p>
+                      <p className="text-destructive text-sm mt-2">
+                        {errors.name}
+                      </p>
                     )}
                   </div>
 
@@ -125,12 +142,17 @@ const Contact = () => {
                       placeholder="Enter your email"
                     />
                     {errors.email && (
-                      <p className="text-destructive text-sm mt-2">{errors.email}</p>
+                      <p className="text-destructive text-sm mt-2">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="text-caption block mb-2">
+                    <label
+                      htmlFor="message"
+                      className="text-caption block mb-2"
+                    >
                       Your Message
                     </label>
                     <textarea
@@ -145,7 +167,9 @@ const Contact = () => {
                       placeholder="Tell us about your project"
                     />
                     {errors.message && (
-                      <p className="text-destructive text-sm mt-2">{errors.message}</p>
+                      <p className="text-destructive text-sm mt-2">
+                        {errors.message}
+                      </p>
                     )}
                   </div>
 
@@ -166,8 +190,9 @@ const Contact = () => {
               <div>
                 <h2 className="heading-section mb-8">Get in Touch</h2>
                 <p className="text-body mb-12">
-                  Whether you're starting a new project or have questions about our services, 
-                  we're here to help. Reach out through any of the channels below.
+                  Whether you're starting a new project or have questions about
+                  our services, we're here to help. Reach out through any of the
+                  channels below.
                 </p>
 
                 <div className="space-y-8">

@@ -71,13 +71,13 @@ const Projects = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-caption mb-2">{project.category}</p>
+                  {/* <p className="text-caption mb-2">{project.category}</p>
                   <h3 className="heading-card group-hover:text-muted-foreground transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground mt-2">
                     {project.location} · {project.year}
-                  </p>
+                  </p> */}
                 </Link>
               </ScrollReveal>
             ))}

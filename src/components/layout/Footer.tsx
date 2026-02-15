@@ -13,31 +13,39 @@ const Footer = () => {
             </h3>
             <p className="text-primary-foreground/70 max-w-md leading-relaxed">
               Architecture • Interior • Construction
-              <br /><br />
-              Creating timeless spaces that inspire and endure. Every project is a story of precision, creativity, and purpose.
+              <br />
+              <br />
+              Design that refuses to fade with time. A bold tale of enduring
+              style and presence
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-caption text-primary-foreground/50 mb-6">Navigation</h4>
+            <h4 className="text-caption text-primary-foreground/50 mb-6">
+              Navigation
+            </h4>
             <ul className="space-y-4">
-              {["Home", "About", "Services", "Projects", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors link-underline"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              {["Home", "About", "Services", "Projects", "Contact"].map(
+                (item) => (
+                  <li key={item}>
+                    <Link
+                      to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors link-underline"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-caption text-primary-foreground/50 mb-6">Connect</h4>
+            <h4 className="text-caption text-primary-foreground/50 mb-6">
+              Connect
+            </h4>
             <ul className="space-y-4">
               <li>
                 <a
@@ -77,10 +85,11 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Architales Design Studio. All rights reserved.
+            © {new Date().getFullYear()} Architales Design Studio. All rights
+            reserved.
           </p>
           <p className="text-sm text-primary-foreground/50">
-            Designed with precision and passion
+            Designed for comfort and balance."
           </p>
         </div>
       </div>

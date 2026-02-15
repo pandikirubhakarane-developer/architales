@@ -33,7 +33,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="heading-display max-w-4xl mx-auto mb-8"
         >
-          <span className="font-display italic">Designing</span> Timeless Spaces
+          <span className="font-display italic">CREATING SPACES </span> THAT CARE
         </motion.h1>
 
         <motion.p
@@ -42,8 +42,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-12"
         >
-          Where architecture meets precision. We craft spaces that inspire, 
-          endure, and tell stories of elegance and purpose.
+         Designing spaces that support your life, mind, and soul—architecture for your wellbeing
         </motion.p>
 
         <motion.div

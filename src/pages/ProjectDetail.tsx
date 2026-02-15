@@ -19,39 +19,49 @@ const ProjectDetail = () => {
   return (
     <Layout>
       {/* Hero Image */}
-      <section className="relative h-[70vh] min-h-[600px]">
-        <img
-          src={project.image}
-          alt={`${project.title} - ${project.category} project by Architales showcasing ${project.style}`}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
-        
-        <div className="absolute bottom-0 left-0 right-0 pb-12 md:pb-16">
-          <div className="container-wide text-primary-foreground">
-            <ScrollReveal>
-              <p className="text-caption text-primary-foreground/70 mb-4">{project.category}</p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <h1 className="heading-display mb-4">{project.title}</h1>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <p className="text-lg text-primary-foreground/80">
-                {project.location} · {project.year}
-              </p>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
+     <section className="relative h-[70vh] min-h-[600px] bg-neutral-900">
+  {/* Image */}
+  <img
+    src={project.image}
+    alt={`${project.title} - ${project.category} project by Architales showcasing ${project.style}`}
+    className="w-full h-full object-contain"
+  />
+
+  {/* Gradient overlay */}
+  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+
+  {/* Content */}
+  <div className="absolute bottom-0 left-0 right-0 pb-12 md:pb-16">
+    <div className="container-wide text-primary-foreground">
+      <ScrollReveal>
+        <p className="text-caption text-primary-foreground/70 mb-4">
+          {project.category}
+        </p>
+      </ScrollReveal>
+
+      <ScrollReveal delay={0.1}>
+        <h1 className="heading-display mb-4">{project.title}</h1>
+      </ScrollReveal>
+
+      <ScrollReveal delay={0.2}>
+        <p className="text-lg text-primary-foreground/80">
+          {project.location} · {project.year}
+        </p>
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <p className="text-2xl md:text-3xl font-display leading-relaxed mb-16">
+          {project.description}
+        </p>
+      </ScrollReveal>
+    </div>
+  </div>
+</section>
+
 
       {/* Content */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
-          <ScrollReveal>
-            <p className="text-2xl md:text-3xl font-display leading-relaxed mb-16">
-              {project.description}
-            </p>
-          </ScrollReveal>
 
           <div className="space-y-12">
             <ScrollReveal>

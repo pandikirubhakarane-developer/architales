@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Image, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "@/assets/logo-white.png";
+import LogoName from "@/assets/logoname.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -29,17 +31,16 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  const headerBg = isScrolled || !isHomePage
-    ? "bg-background/95 backdrop-blur-md border-b border-border"
-    : "bg-transparent";
+  const headerBg =
+    isScrolled || !isHomePage
+      ? "bg-background/95 backdrop-blur-md border-b border-border"
+      : "bg-transparent";
 
-  const textColor = isScrolled || !isHomePage
-    ? "text-foreground"
-    : "text-primary-foreground";
+  const textColor =
+    isScrolled || !isHomePage ? "text-foreground" : "text-primary-foreground";
 
-  const logoColor = isScrolled || !isHomePage
-    ? "text-foreground"
-    : "text-primary-foreground";
+  const logoColor =
+    isScrolled || !isHomePage ? "text-foreground" : "text-primary-foreground";
 
   return (
     <>
@@ -53,7 +54,16 @@ const Header = () => {
               to="/"
               className={`font-display text-2xl md:text-3xl font-medium tracking-tight transition-colors ${logoColor}`}
             >
-              Architales
+              <img
+                src={Logo}
+                alt="logo"
+                className="w-[40px] h-[40px] ml-[40px] object-cover"
+              />
+              <img
+                src={LogoName}
+                alt="logo"
+                className="w-full h-[40px] object-cover"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -63,7 +73,9 @@ const Header = () => {
                   <Link
                     to={link.path}
                     className={`text-sm tracking-[0.15em] uppercase transition-colors link-underline ${textColor} hover:opacity-70 ${
-                      location.pathname === link.path ? "opacity-100" : "opacity-80"
+                      location.pathname === link.path
+                        ? "opacity-100"
+                        : "opacity-80"
                     }`}
                   >
                     {link.name}

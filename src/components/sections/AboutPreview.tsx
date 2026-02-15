@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ScrollReveal from "../ui/ScrollReveal";
-import founderImage from "@/assets/founder.jpg";
+import founderImage from "@/assets/founder.jpeg";
 
 const AboutPreview = () => {
   return (

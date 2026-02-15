@@ -17,6 +17,7 @@ const services = [
       "Construction administration",
     ],
   },
+  
   {
     icon: Palette,
     title: "Interior Design",
